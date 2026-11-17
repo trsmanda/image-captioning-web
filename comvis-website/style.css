@@ -1,0 +1,166 @@
+/* --- Pengaturan Dasar & Earth-Tone Palette --- */
+:root {
+    --bg-color: #F7F5F0;         /* Warm beige / Krem sangat lembut */
+    --card-bg: #FFFFFF;         /* Putih bersih untuk card */
+    --text-main: #4A403B;       /* Cokelat tua keabuan untuk teks utama */
+    --text-muted: #8C827B;      /* Cokelat muda untuk teks sekunder */
+    --accent: #A67B5B;          /* Terracotta / Cokelat hangat aksen */
+    --accent-hover: #8C6546;    --border-color: #E6E2DD;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+}
+
+/* --- Header --- */
+.header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 6px;
+}
+
+.header p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* --- Card Container --- */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(74, 64, 59, 0.04);
+}
+
+/* --- Upload Box --- */
+.upload-section {
+    margin-bottom: 20px;
+}
+
+.upload-box {
+    border: 2px dashed var(--border-color);
+    border-radius: 12px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    position: relative;
+    background-color: #FAFAF9;
+}
+
+.upload-box:hover {
+    border-color: var(--accent);
+    background-color: #F4F1EA;
+}
+
+.upload-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.upload-content .icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.upload-content p {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.sub-text {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* Pratinjau Foto di dalam kotak */
+#imagePreview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* --- Tombol Utama --- */
+.btn-primary {
+    width: 100%;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:disabled {
+    background-color: var(--border-color);
+    color: var(--text-muted);
+    cursor: not-allowed;
+}
+
+.btn-primary:not(:disabled):hover {
+    background-color: var(--accent-hover);
+}
+
+/* --- Hasil Analisis --- */
+.result-section {
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 16px;
+}
+
+.result-section h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.result-box {
+    background-color: #FAFAF9;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    color: var(--text-main);
+    line-height: 1.4;
+}
+
+/* --- Utility Class --- */
+.hidden {
+    display: none !important;
+}
