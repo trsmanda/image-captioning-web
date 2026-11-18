@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Vision Analysis - Image Captioning</title>
+    <!-- Menghubungkan file CSS terpisah -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts Inter untuk kesan modern & clean -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header / Judul Minimalis -->
+        <header class="header">
+            <h1>Image Captioning | Computer Vision</h1>
+            <p>Upload your photo to be analyzed by the AI model.</p>
+        </header>
+
+        <!-- Area Utama / Card -->
+        <main class="card">
+            <!-- Bagian Upload -->
+            <div class="upload-section">
+                <input type="file" id="imageInput" accept="image/*" hidden>
+                <label for="imageInput" class="upload-box" id="dropZone">
+                    <div class="upload-content" id="uploadPrompt">
+                        <span class="icon">📁</span>
+                        <p>Click and drag your photo here or browse</p>
+                        <span class="sub-text">Supports JPG and PNG formats</span>
+                    </div>
+                    <img id="imagePreview" class="hidden" alt="Photo Preview">
+                </label>
+            </div>
+
+            <!-- Tombol Analisis -->
+            <button id="analyzeBtn" class="btn-primary" disabled>Analyze Photo</button>
+
+            <!-- Bagian Hasil Analisis (Output) -->
+            <div class="result-section hidden" id="resultSection">
+                <h3>AI Analysis Result</h3>
+                <div class="result-box">
+                    <p id="resultText">Loading analysis result from the model...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Menghubungkan file JavaScript terpisah -->
+    <script src="script.js"></script>
+</body>
+</html>
